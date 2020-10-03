@@ -1,0 +1,20 @@
+header{
+    background-image: url('./header-bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 60px 0;
+    text-align: center;
+}
+header h1 {
+    color: black;
+    font-size: 44px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px){
+    header h1{
+        font-size: 36px;
+        color: white;
+        filter: drop-shadow(0 0 10px black);
+    }
+}
