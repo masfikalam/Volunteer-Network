@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './Home.css'
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
@@ -6,16 +6,9 @@ import Header from '../Header/Header';
 const Home = () => {
     const [events, setEvents] = useState([]);
 
-    // load all events
-    useEffect(() => {
-        fetch('https://serene-shore-71005.herokuapp.com/allEvents')
-        .then(res => res.json())
-        .then(data => setEvents(data));
-    }, [])
-
     return (
         <main>
-            <Header />
+            <Header setEvents={setEvents} />
             <section id="home" className="container py-5 text-center">
                 <h4 className="text-primary mb-4">Click on events to become volunteer</h4>
                 <div className="row">
